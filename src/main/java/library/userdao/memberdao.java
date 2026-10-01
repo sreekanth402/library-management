@@ -10,7 +10,7 @@ public class memberdao {
 
     private static final String url="jdbc:mysql://localhost:3306/libray";
     private static final String user="root";
-    private static final String password="00000";
+    private static final String password=System.getenv("password");
 
 
     public boolean addmember(member m) throws SQLException {

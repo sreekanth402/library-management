@@ -9,7 +9,7 @@ import java.util.List;
 public class bookdao {
     private static final String url = "jdbc:mysql://localhost:3306/libray";
     private static final String username = "root";
-    private static final String password = "00000";
+    private static final String password = System.getenv("password");
 
     public static boolean  addbook(book b) {
         String sql = "Insert into library(title,author,publisher,price,status) values(?,?,?,?,?)";

@@ -10,7 +10,7 @@ import java.util.List;
 public class borrowdao {
     private static final String url="jdbc:mysql://localhost:3306/libray";
     private static final String user="root";
-    private static final String password="00000";
+    private static final String password=System.getenv("password");
 
 public void issuebook(borrowrecord record){
     String sql ="insert into borrow(book_id,member_id,issue_date,return_date,pending_bal) values(?,?,?,?,?)";
